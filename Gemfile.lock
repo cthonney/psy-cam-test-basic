@@ -104,6 +104,10 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
+    faraday (2.3.0)
+      faraday-net_http (~> 2.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (2.0.3)
     ffi (1.15.5)
     font-awesome-sass (6.1.1)
       sassc (~> 2.0)
@@ -114,9 +118,6 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     jsbundling-rails (1.0.3)
       railties (>= 6.0.0)
     loofah (2.18.0)
@@ -186,6 +187,7 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -245,8 +247,8 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  faraday
   font-awesome-sass (~> 6.1)
-  jbuilder
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)

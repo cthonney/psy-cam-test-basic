@@ -1,2 +1,9 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<ul>
+    <% @consultations.each do |consultation| %>
+      <li">
+        <%= link_to consultation.psy, sessions_show_path(consultation: consultation), method: :post, class: "h5" %>
+        <p class="text-warning mb-1"> Mentor: <%= consultation.specialties %> </p>
+      </li>
+    <% end %>
+  </ul>
+

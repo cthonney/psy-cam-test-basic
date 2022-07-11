@@ -65,10 +65,11 @@ class ConsultationsController < ApplicationController
   end
 
   def create_room
+    @api_key = ENV['VIDEO_DAILY']
     res = Faraday.post "https://api.daily.co/v1/rooms/" do |req|
       req.body = { properties: { enable_chat: true, enable_people_ui: false, enable_pip_ui: true }}.to_json
       req.headers['Content-Type'] = 'application/json'
-      req.headers['Authorization'] = 'Bearer 2c4c1fe6ffda1be878ba3c870d9112ab328210186ad230755c003c6973e9fa12'
+      req.headers['Authorization'] = @api_key
     end
     return JSON.parse(res.body)["url"] if res.status == 200
   end

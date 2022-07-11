@@ -10,11 +10,11 @@
 </div>
 
 
-<script src="https://unpkg.com/@daily-co/daily-js"></script>
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
 let myLink = '<%= @room_link %>';
 if (window.innerWidth <= 600) {
-  callFrame = window.DailyIframe.createFrame({
+  window.callFrame = window.DailyIframe.createFrame({
   showLeaveButton: true,
       iframeStyle: {
       position: 'fixed',
@@ -27,7 +27,7 @@ if (window.innerWidth <= 600) {
 
   callFrame.join({ url: myLink })
 } else {
-      callFrame = window.DailyIframe.createFrame({
+      window.callFrame = window.DailyIframe.createFrame({
       showLeaveButton: true,
       iframeStyle: {
       position: 'fixed',

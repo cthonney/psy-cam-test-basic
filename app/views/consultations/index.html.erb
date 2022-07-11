@@ -6,9 +6,9 @@
   <% @consultations.each do |consultation| %>
     <%= render consultation %>
     <p>
-      <%= link_to "Show this consultation", consultation %>
+      <%= link_to "Show this consultation", consultation, :class => "btn btn-secondary" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New consultation", new_consultation_path %>
+<%= link_to "New consultation", new_consultation_path, :class => "btn btn-primary" %>

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/show'
   get 'welcome/index'
   resources :consultations
   # sends a get request to the show method in the sessions controller
